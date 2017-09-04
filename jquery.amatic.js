@@ -1,6 +1,6 @@
 
 // * Amatic JS
-// * Version - 0.1
+// * Version - 1.0
 // * Licensed under the MIT license - http://opensource.org/licenses/MIT
 // * Renan Diaz
 // * Copyright (c) 2017 
