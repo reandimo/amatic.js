@@ -46,13 +46,14 @@ Or:
 
 <pre>
 $(document).amatic(css, {
-	newclass: "",										fade_in: false
+	newclass: "",										
+	fade_in: false
 });
 </pre>
 
 Or:
 
-<pre>$(document).amatic({background-color: “black”, color: “white” });</pre>
+<pre>$(document).amatic(css, {newclass: "", fade_in: false});</pre>
 <br>
 
 6.	Animations:
