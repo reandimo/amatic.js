@@ -51,9 +51,6 @@ $(document).amatic(css, {
 });
 </pre>
 
-Or:
-
-<pre>$(document).amatic(css, {newclass: "", fade_in: false});</pre>
 <br>
 
 6.	Animations:
