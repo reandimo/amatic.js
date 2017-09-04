@@ -3,15 +3,19 @@
  * Amatic CSS
  * Version - 0.1
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2017 Renan Diaz
+ * Renan Diaz
+ * Copyright (c) 2017 
  */
 
 .amatic-element {
-	transition: ease-in-out 0.3s;
-	display: none;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    transition: ease-in-out 0.3s;
+    display: none;
     position: fixed !important;
-	
     bottom: 20px;
     right: 30px;
     z-index: 99;
@@ -21,26 +25,14 @@
     color: white;
     text-align: center;
     cursor: progress;	
-	vertical-align: middle;
-	font-size: 14px;
-	
-	
-	display: flex !important;
+    vertical-align: middle;
+    font-size: 28px;
+    display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
-
-    /* add this */  
-	
-    width: 50px;
-    height: 50px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
-	
-	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-	
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 	
 }
 
@@ -56,6 +48,7 @@
     transform: rotate(360deg);
   }
 }
+
 @keyframes rotating {
   from {
     -ms-transform: rotate(0deg);
@@ -83,7 +76,7 @@
 
 .amatic-element:hover {
 	
-	opacity: 0.5;
+  opacity: 0.5;
 	
 }
 
