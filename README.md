@@ -202,4 +202,4 @@ animate_out: "bounceOutDown}"
 
 # License
 
-Animate.css is licensed under the MIT license. (http://opensource.org/licenses/MIT)
+Amatic.js is licensed under the MIT license. (http://opensource.org/licenses/MIT)
