@@ -73,16 +73,16 @@ animate_out: "bounceOutDown}"
 <tbody>
 <tr>
 <td width="189">
-<p>Name</p>
+	<p><b>Name</b></p>
 </td>
 <td width="115">
-<p>Type</p>
+	<p><b>Type</b></p>
 </td>
 <td width="115">
-<p>Default</p>
+	<p><b>Default</b></p>
 </td>
 <td width="115">
-<p>Description</p>
+	<p><b>Description</b></p>
 </td>
 </tr>
 <tr>
