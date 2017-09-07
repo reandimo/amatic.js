@@ -40,17 +40,23 @@ $.fn.amatic = function( css, options ) {
 		
 		this.ajaxStart( function(){
 		
-		$("body").append( "<div class='amatic-element' style='display: none;'><i class='"+options.loader+" rotating'></i></div>" );
-		
-		if(css !== ""){
-		
-		$(".amatic-element").css(css); //Add css if is set
+			
+		if($('#amatic-element').length <= 0){
+			
+		$("body").append( "<div id='amatic-element' class='amatic-element' style='display: none;'><i class='"+options.loader+" rotating'></i></div>" );
 		
 		}
 			
-		$(".amatic-element").addClass(options.newclass); //Add class if is set			
+			
+		if(css !== ""){
 		
-		$(".amatic-element").addClass("animated "+options.animate_in); //Add animation if is set			
+		$("#amatic-element").css(css); //Add css if is set
+		
+		}
+			
+		$("#amatic-element").addClass(options.newclass); //Add class if is set			
+		
+		$("#amatic-element").addClass("animated "+options.animate_in); //Add animation if is set			
 
 		switch(options.fade_in){ //detect fadeIn config	
 				
@@ -58,11 +64,11 @@ $.fn.amatic = function( css, options ) {
 			
 				if(options.animate_in !== ""){
 				
-				   $(".amatic-element").show(); 
+				   $("#amatic-element").show(); 
 				
 				}else{
 				
-				   $(".amatic-element").fadeIn();
+				   $("#amatic-element").fadeIn();
 				
 				}			
 				
@@ -71,7 +77,7 @@ $.fn.amatic = function( css, options ) {
 				
 			case false :
 			
-			   	$(".amatic-element").show(); 
+			   	$("#amatic-element").show(); 
 
 			break;
 		
@@ -88,7 +94,7 @@ $.fn.amatic = function( css, options ) {
 
 		setTimeout(function(){
 			
-		$(".amatic-element").html("<i class='"+options.loader_complete+"'></i>"); 
+		$("#amatic-element").html("<i class='"+options.loader_complete+"'></i>"); 
 		
 		}, 1000);
 			
@@ -99,11 +105,11 @@ $.fn.amatic = function( css, options ) {
 		
 		this.ajaxComplete( function(){
 		
-		setTimeout(function(){  
-
-		$(".amatic-element").removeClass("animated "+options.animate_in); //remove initial animation if is set			
+		$("#amatic-element").removeClass("animated "+options.animate_in); //remove initial animation if is set			
 			
-		$(".amatic-element").addClass("animated "+options.animate_out); //Add animation if is set			
+		$("#amatic-element").addClass("animated "+options.animate_out); //Add animation if is set			
+
+			
 			
 			switch (options.fade_out){//detect fadeOut config	
 				
@@ -111,11 +117,11 @@ $.fn.amatic = function( css, options ) {
 			
 				if(options.animate_out !== ""){
 				
-				   $(".amatic-element").hide(); 
+				   $("#amatic-element").hide(); 
 				
 				}else{
 				
-				   $(".amatic-element").fadeOut();
+				   $("#amatic-element").fadeOut();
 				
 				}	
 					
@@ -123,16 +129,14 @@ $.fn.amatic = function( css, options ) {
 			
 			case false :
 			
-			   	$(".amatic-element").hide(); 
+			   	$("#amatic-element").hide(); 
 
 			break;
 			
 			}
 		
-			
-		}, options.time_out);
 		
-		setTimeout(function(){	$(".amatic-element").remove();	}, remove_time);
+		setTimeout(function(){	$("#amatic-element").remove();	}, remove_time);
 			
 		});
 		
@@ -143,7 +147,7 @@ $.fn.amatic = function( css, options ) {
 						
 	} 
 
-}
+};
 	
 
 	
