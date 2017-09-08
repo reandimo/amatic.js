@@ -21,7 +21,7 @@ amatic.js is a cool and customizable notification for an ajax event.
 2.	To initialize the plugin:
 
 <code>
-     <<span>script</span>>   $(document).amatic();   </<span>script</span>>
+     <<span>script</span>>   $(document).amatic();   <<span>script</span>>
 </code>
 <br>
 
