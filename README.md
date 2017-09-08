@@ -57,12 +57,10 @@ $(document).amatic(css, {
 
 <pre><script>
 
-	$(document).amatic(css, {
-
-animate_in: "bounceInUp", 
-animate_out: "bounceOutDown}"
-
-);
+$(document).amatic(css, {
+	animate_in: "bounceInUp", 
+	animate_out: "bounceOutDown"
+});
 
 </script></pre>
 <br>
