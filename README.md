@@ -32,14 +32,14 @@ amatic.js is a cool and customizable notification for an ajax event.
 
 4.	You can define new CSS Rules for the notification/loader like this:
 
-  <pre>var css = { backgroundColor: “black”, color: “white” };</pre>
+  <pre>var css = { backgroundColor: "black", color: "white" };</pre>
 
   <pre>$(document).amatic(css);</pre>
 <br>
 
 Or:
 
-  <pre>$(document).amatic({backgroundColor: “black”, color: “white” });</pre>
+  <pre>$(document).amatic({backgroundColor: "black", color: "white" });</pre>
 <br>
 
 5.	And modify the options avaiables:
