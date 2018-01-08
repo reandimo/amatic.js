@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+<title>Amatic.js</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-camo.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-vivid.css">
+<link rel="stylesheet" href="js/amatic.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.amatic.js"></script>
+
+<style>
+	
+	* { transition: ease-in-out 0.1s; }
+	
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+	
+	header {
+		
+		background: transparent no-repeat top center;
+		margin: 0;
+		
+	}
+	#scene { padding: 0px;}	
+
+</style>
+<body>
+
+<!-- Navbar -->
+<!--<div class="w3-top">
+  <div class="w3-bar w3-red w3-card-2 w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+<!--  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>-->
+
+
+<!-- Header -->
+<header class="w3-container w3-center w3-red" style=" padding: 0px; overflow: hidden;">
+
+	<div id="main" style="padding: 0px;">
+		<div class="w3-col s12">
+			
+			<ul id="scene" style="opacity: 1;padding: 0px; left:-25px; list-style: none;">
+<!--				<li class="layer" data-depth="0.10" ><img src="images/main.png" width="120%" height="120%"/></li>
+-->				<li class="layer" style="opacity: 0.5;" data-depth="0.10" ><img src="images/main.png" width="120%" height="120%"/></li>
+			</ul>
+			
+		</div>
+	</div>
+	
+
+<div align="center" class="w3-col s6" style="position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0; margin-top: 150px;
+">
+ 
+  <h1 class="w3-margin w3-jumbo" style="background-color: black">Amatic.js</h1>
+  <p class="w3-xlarge w3-camo-black" style="padding: 8px">Cool Notifications/loaders for your Web Application o site</p>
+  <a href="#showme" class="w3-button w3-black w3-padding-large w3-large w3-margin-top scroll">Show Me!</a>
+  
+	</div>
+</header>
+
+<!-- First Grid -->
+<div id="showme" class="w3-row-padding w3-padding-64 w3-container">
+  
+
+  <div class="w3-content">      
+
+      <h1>Setup</h1>
+
+<div>
+
+<div style="border-color: #F44336" class="w3-code htmlHigh notranslate">
+&lt;head&gt;<br>
+
+&lt;link rel="stylesheet" href="amatic.css"&gt;<br>
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&gt;<br>
+
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;<br>
+
+&lt;script type="text/javascript" src="jquery.amatic.js"&gt;<br>
+
+&lt;head&gt;
+</div>
+
+
+      <h1>Get Started</h1>
+
+<div style="border-color: #F44336" class="w3-code htmlHigh notranslate">
+&lt;script&gt;<br>
+
+$(document).ready(function(){<br>
+<br>
+$(document).amatic()<br>
+<br>
+});<br>
+
+&lt;script&gt;
+</div>
+  
+      	<h4>And done, now the document will show a default preloader on every ajax event!. Try it!</h4>
+      	
+       	<span id="amatic-animate" class="w3-button w3-red" onClick="ajax()" >Show Me</span>
+  
+	  </div>   
+   
+    </div>
+
+      <div class="w3-content" style="margin-top: 25px;">
+
+   		<h1>You can add custom css:</h1>
+  
+  		<textarea placeholder="color: yellow; background-color: blue;" id="amatic-css-val" class="w3-input"></textarea>
+  		<br>
+  		
+  		<span id="amatic-css" class="w3-button w3-red" onClick="ajaxcss()">Show Me</span>
+  
+	  </div>     
+     
+           <div class="w3-content" style="margin-top: 25px;">
+
+   		<h1>Or set the timeOut:</h1>
+  
+          <h5 class="w3-text-gray">Use the property "time_out" to set:</h5>
+
+  
+  		<input placeholder="2000, 3000, 4000" id="amatic-timeout-val" class="w3-input">
+  		<br>
+  		
+  		<span class="w3-button w3-red" onClick="ajaxtimeout()">Show Me</span>
+  
+	  </div>
+     
+      <div class="w3-content" style="margin-top: 25px;">
+      <h1>You can add animations:</h1>
+        
+        <h5 class="w3-text-gray">Use Animate.css to add some animations:</h5>
+        <div class="w3-panel" style="margin-top: 50px;">
+        <div class="w3-col s6" align="center" style="padding: 0 50px;">
+        <label>Animate In</label>
+         			<select class="w3-select" id="animation-in">
+        <optgroup label="Attention Seekers">
+          <option value="bounce">bounce</option>
+          <option value="flash">flash</option>
+          <option value="pulse">pulse</option>
+          <option value="rubberBand">rubberBand</option>
+          <option value="shake">shake</option>
+          <option value="swing">swing</option>
+          <option value="tada">tada</option>
+          <option value="wobble">wobble</option>
+          <option value="jello">jello</option>
+        </optgroup>
+
+        <optgroup label="Bouncing Entrances">
+          <option value="bounceIn">bounceIn</option>
+          <option value="bounceInDown">bounceInDown</option>
+          <option value="bounceInLeft">bounceInLeft</option>
+          <option value="bounceInRight">bounceInRight</option>
+          <option value="bounceInUp">bounceInUp</option>
+        </optgroup>
+
+        <optgroup label="Bouncing Exits">
+          <option value="bounceOut">bounceOut</option>
+          <option value="bounceOutDown">bounceOutDown</option>
+          <option value="bounceOutLeft">bounceOutLeft</option>
+          <option value="bounceOutRight">bounceOutRight</option>
+          <option value="bounceOutUp">bounceOutUp</option>
+        </optgroup>
+
+        <optgroup label="Fading Entrances">
+          <option value="fadeIn">fadeIn</option>
+          <option value="fadeInDown">fadeInDown</option>
+          <option value="fadeInDownBig">fadeInDownBig</option>
+          <option value="fadeInLeft">fadeInLeft</option>
+          <option value="fadeInLeftBig">fadeInLeftBig</option>
+          <option value="fadeInRight">fadeInRight</option>
+          <option value="fadeInRightBig">fadeInRightBig</option>
+          <option value="fadeInUp">fadeInUp</option>
+          <option value="fadeInUpBig">fadeInUpBig</option>
+        </optgroup>
+
+        <optgroup label="Fading Exits">
+          <option value="fadeOut">fadeOut</option>
+          <option value="fadeOutDown">fadeOutDown</option>
+          <option value="fadeOutDownBig">fadeOutDownBig</option>
+          <option value="fadeOutLeft">fadeOutLeft</option>
+          <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+          <option value="fadeOutRight">fadeOutRight</option>
+          <option value="fadeOutRightBig">fadeOutRightBig</option>
+          <option value="fadeOutUp">fadeOutUp</option>
+          <option value="fadeOutUpBig">fadeOutUpBig</option>
+        </optgroup>
+
+        <optgroup label="Flippers">
+          <option value="flip">flip</option>
+          <option value="flipInX">flipInX</option>
+          <option value="flipInY">flipInY</option>
+          <option value="flipOutX">flipOutX</option>
+          <option value="flipOutY">flipOutY</option>
+        </optgroup>
+
+        <optgroup label="Lightspeed">
+          <option value="lightSpeedIn">lightSpeedIn</option>
+          <option value="lightSpeedOut">lightSpeedOut</option>
+        </optgroup>
+
+        <optgroup label="Rotating Entrances">
+          <option value="rotateIn">rotateIn</option>
+          <option value="rotateInDownLeft">rotateInDownLeft</option>
+          <option value="rotateInDownRight">rotateInDownRight</option>
+          <option value="rotateInUpLeft">rotateInUpLeft</option>
+          <option value="rotateInUpRight">rotateInUpRight</option>
+        </optgroup>
+
+        <optgroup label="Rotating Exits">
+          <option value="rotateOut">rotateOut</option>
+          <option value="rotateOutDownLeft">rotateOutDownLeft</option>
+          <option value="rotateOutDownRight">rotateOutDownRight</option>
+          <option value="rotateOutUpLeft">rotateOutUpLeft</option>
+          <option value="rotateOutUpRight">rotateOutUpRight</option>
+        </optgroup>
+
+        <optgroup label="Sliding Entrances">
+          <option value="slideInUp">slideInUp</option>
+          <option value="slideInDown">slideInDown</option>
+          <option value="slideInLeft">slideInLeft</option>
+          <option value="slideInRight">slideInRight</option>
+
+        </optgroup>
+        <optgroup label="Sliding Exits">
+          <option value="slideOutUp">slideOutUp</option>
+          <option value="slideOutDown">slideOutDown</option>
+          <option value="slideOutLeft">slideOutLeft</option>
+          <option value="slideOutRight">slideOutRight</option>
+          
+        </optgroup>
+        
+        <optgroup label="Zoom Entrances">
+          <option value="zoomIn">zoomIn</option>
+          <option value="zoomInDown">zoomInDown</option>
+          <option value="zoomInLeft">zoomInLeft</option>
+          <option value="zoomInRight">zoomInRight</option>
+          <option value="zoomInUp">zoomInUp</option>
+        </optgroup>
+        
+        <optgroup label="Zoom Exits">
+          <option value="zoomOut">zoomOut</option>
+          <option value="zoomOutDown">zoomOutDown</option>
+          <option value="zoomOutLeft">zoomOutLeft</option>
+          <option value="zoomOutRight">zoomOutRight</option>
+          <option value="zoomOutUp">zoomOutUp</option>
+        </optgroup>
+
+        <optgroup label="Specials">
+          <option value="hinge">hinge</option>
+          <option value="jackInTheBox">jackInTheBox</option>
+          <option value="rollIn">rollIn</option>
+          <option value="rollOut">rollOut</option>
+        </optgroup>
+      </select>
+	    </div>
+         
+        <div class="w3-col s6" align="center" style="padding: 0 50px;">
+        <label>Animate Out</label>
+         			<select class="w3-select" id="animation-out">
+        <optgroup label="Attention Seekers">
+          <option value="bounce">bounce</option>
+          <option value="flash">flash</option>
+          <option value="pulse">pulse</option>
+          <option value="rubberBand">rubberBand</option>
+          <option value="shake">shake</option>
+          <option value="swing">swing</option>
+          <option value="tada">tada</option>
+          <option value="wobble">wobble</option>
+          <option value="jello">jello</option>
+        </optgroup>
+
+        <optgroup label="Bouncing Entrances">
+          <option value="bounceIn">bounceIn</option>
+          <option value="bounceInDown">bounceInDown</option>
+          <option value="bounceInLeft">bounceInLeft</option>
+          <option value="bounceInRight">bounceInRight</option>
+          <option value="bounceInUp">bounceInUp</option>
+        </optgroup>
+
+        <optgroup label="Bouncing Exits">
+          <option value="bounceOut">bounceOut</option>
+          <option value="bounceOutDown">bounceOutDown</option>
+          <option value="bounceOutLeft">bounceOutLeft</option>
+          <option value="bounceOutRight">bounceOutRight</option>
+          <option value="bounceOutUp">bounceOutUp</option>
+        </optgroup>
+
+        <optgroup label="Fading Entrances">
+          <option value="fadeIn">fadeIn</option>
+          <option value="fadeInDown">fadeInDown</option>
+          <option value="fadeInDownBig">fadeInDownBig</option>
+          <option value="fadeInLeft">fadeInLeft</option>
+          <option value="fadeInLeftBig">fadeInLeftBig</option>
+          <option value="fadeInRight">fadeInRight</option>
+          <option value="fadeInRightBig">fadeInRightBig</option>
+          <option value="fadeInUp">fadeInUp</option>
+          <option value="fadeInUpBig">fadeInUpBig</option>
+        </optgroup>
+
+        <optgroup label="Fading Exits">
+          <option value="fadeOut">fadeOut</option>
+          <option value="fadeOutDown">fadeOutDown</option>
+          <option value="fadeOutDownBig">fadeOutDownBig</option>
+          <option value="fadeOutLeft">fadeOutLeft</option>
+          <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+          <option value="fadeOutRight">fadeOutRight</option>
+          <option value="fadeOutRightBig">fadeOutRightBig</option>
+          <option value="fadeOutUp">fadeOutUp</option>
+          <option value="fadeOutUpBig">fadeOutUpBig</option>
+        </optgroup>
+
+        <optgroup label="Flippers">
+          <option value="flip">flip</option>
+          <option value="flipInX">flipInX</option>
+          <option value="flipInY">flipInY</option>
+          <option value="flipOutX">flipOutX</option>
+          <option value="flipOutY">flipOutY</option>
+        </optgroup>
+
+        <optgroup label="Lightspeed">
+          <option value="lightSpeedIn">lightSpeedIn</option>
+          <option value="lightSpeedOut">lightSpeedOut</option>
+        </optgroup>
+
+        <optgroup label="Rotating Entrances">
+          <option value="rotateIn">rotateIn</option>
+          <option value="rotateInDownLeft">rotateInDownLeft</option>
+          <option value="rotateInDownRight">rotateInDownRight</option>
+          <option value="rotateInUpLeft">rotateInUpLeft</option>
+          <option value="rotateInUpRight">rotateInUpRight</option>
+        </optgroup>
+
+        <optgroup label="Rotating Exits">
+          <option value="rotateOut">rotateOut</option>
+          <option value="rotateOutDownLeft">rotateOutDownLeft</option>
+          <option value="rotateOutDownRight">rotateOutDownRight</option>
+          <option value="rotateOutUpLeft">rotateOutUpLeft</option>
+          <option value="rotateOutUpRight">rotateOutUpRight</option>
+        </optgroup>
+
+        <optgroup label="Sliding Entrances">
+          <option value="slideInUp">slideInUp</option>
+          <option value="slideInDown">slideInDown</option>
+          <option value="slideInLeft">slideInLeft</option>
+          <option value="slideInRight">slideInRight</option>
+
+        </optgroup>
+        <optgroup label="Sliding Exits">
+          <option value="slideOutUp">slideOutUp</option>
+          <option value="slideOutDown">slideOutDown</option>
+          <option value="slideOutLeft">slideOutLeft</option>
+          <option value="slideOutRight">slideOutRight</option>
+          
+        </optgroup>
+        
+        <optgroup label="Zoom Entrances">
+          <option value="zoomIn">zoomIn</option>
+          <option value="zoomInDown">zoomInDown</option>
+          <option value="zoomInLeft">zoomInLeft</option>
+          <option value="zoomInRight">zoomInRight</option>
+          <option value="zoomInUp">zoomInUp</option>
+        </optgroup>
+        
+        <optgroup label="Zoom Exits">
+          <option value="zoomOut">zoomOut</option>
+          <option value="zoomOutDown">zoomOutDown</option>
+          <option value="zoomOutLeft">zoomOutLeft</option>
+          <option value="zoomOutRight">zoomOutRight</option>
+          <option value="zoomOutUp">zoomOutUp</option>
+        </optgroup>
+
+        <optgroup label="Specials">
+          <option value="hinge">hinge</option>
+          <option value="jackInTheBox">jackInTheBox</option>
+          <option value="rollIn">rollIn</option>
+          <option value="rollOut">rollOut</option>
+        </optgroup>
+      </select>
+	    </div>   
+
+
+        	
+ 
+		</div>     
+          <br>
+      
+        <div class="w3-col s12">
+       		
+       	<span id="amatic-animate-show" class="w3-button w3-red" onClick="ajaxanimate()" >Show Me</span>
+       		
+       	</div>
+      
+</div>
+
+
+      <div class="w3-content" style="margin-top: 75px;">
+
+   		<h1>See the options below:</h1>
+  
+  		<table class="w3-table-all">
+<tbody>
+<tr>
+<td width="189">
+	<p><b>Name</b></p>
+</td>
+<td width="115">
+	<p><b>Type</b></p>
+</td>
+<td width="115">
+	<p><b>Default</b></p>
+</td>
+<td width="115">
+	<p><b>Description</b></p>
+</td>
+</tr>
+<tr>
+<td width="189">
+<p>newclass</p>
+</td>
+<td width="115">
+<p>string</p>
+</td>
+<td width="115">
+<p>null</p>
+</td>
+<td width="115">
+<p>Define a new class for notification/loader</p>
+</td>
+</tr>
+<tr>
+<td width="189">
+<p>loader</p>
+</td>
+<td width="115">
+<p>string</p>
+</td>
+<td width="115">
+<p>fa fa-circle-o-notch</p>
+</td>
+<td width="115">
+<p>Define the class of the icon to display (Font Awesome is Default)</p>
+</td>
+</tr>
+<tr>
+<td width="189">
+<p>loader_complete</p>
+</td>
+<td width="115">
+<p>string</p>
+</td>
+<td width="115">
+<p>fa fa-check</p>
+</td>
+<td width="115">
+<p>Define the class of the icon to display (Font Awesome is Default)</p>
+</td>
+</tr>
+<tr>
+<td width="189">
+<p>fade_in</p>
+</td>
+<td width="115">
+<p>boolean</p>
+</td>
+<td width="115">
+<p>true</p>
+</td>
+<td width="115">
+<p>Activate/Desactivate fade in at the start of notification/loader</p>
+</td>
+</tr>
+<tr>
+<td width="189">
+<p>fade_out</p>
+</td>
+<td width="115">
+<p>boolean</p>
+</td>
+<td width="115">
+<p>true</p>
+</td>
+<td width="115">
+<p>Activate/Desactivate fade out at the start of notification/loader</p>
+</td>
+</tr>
+<tr>
+<td width="189">
+<p>animate_in</p>
+</td>
+<td width="115">
+<p>string</p>
+</td>
+<td width="115">
+<p>null</p>
+</td>
+<td width="115">
+<p>The class of the animation to display &nbsp;(animate.css required)</p>
+</td>
+</tr>
+<tr>
+<td width="189">
+<p>animate_out</p>
+</td>
+<td width="115">
+<p>string</p>
+</td>
+<td width="115">
+<p>null</p>
+</td>
+<td width="115">
+<p>The class of the animation to hide (animate.css required)</p>
+</td>
+</tr>
+<tr>
+<td width="189">
+<p>time_out</p>
+</td>
+<td width="115">
+<p>time</p>
+</td>
+<td width="115">
+<p>2000 (2 seconds)</p>
+</td>
+<td width="115">
+<p>The time of the notification/loader to be displayed</p>
+</td>
+</tr>
+</tbody>
+</table>
+  
+	  </div>
+
+
+  </div>
+
+
+
+<div class="w3-container w3-center w3-opacity w3-padding-64 w3-camo-dark-gray">
+   
+   <h4>See all the documentation on:</h4>
+    <a target="_blank" href="https://github.com/reandimo/amatic.js/" class="w3-button w3-vivid-orange" style="vertical-align: middle; "><i style="vertical-align:middle; margin-right: 10px" class="fa fa-github w3-hover-opacity fa-3x"></i> Github </a>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-vivid-black">  
+  <div class="w3-xlarge w3-padding-32">
+	  <a target="_blank" href="https://www.facebook.com/designnativo/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+	  <a target="_blank" href="https://www.instagram.com/designnativo/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+	  <a target="_blank" href="https://github.com/reandimo/amatic.js/"><i class="fa fa-github w3-hover-opacity"></i></a>
+ </div>
+ <p>Powered by <a href="https://www.nativoteam.com/" target="_blank">Nativo Creative Team</a></p>
+
+</footer>
+
+
+
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+	<!-- Scripts -->
+	<script src="js/parallax.min.js"></script>
+	<script>
+
+
+		
+	// Pretty simple huh?
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+
+	var h = $(window).height();
+	
+	$(document).ready(function(){
+		
+		$("header").css("height", h)
+	});
+		
+	$(document).on('click', '.scroll', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+});
+		
+		
+		
+	function ajaxanimate(){
+	
+	var css = $("#amatic-css-val").val();
+		
+	var animate_in = $("#animation-in").val();
+	var animate_out = $("#animation-out").val();
+		
+	var options = {animate_in: animate_in, animate_out: animate_out};
+	
+	console.log(options);	
+	console.log(css);	
+
+	$(document).amatic(css, options);
+
+		
+		$.ajax({
+			
+			type: "post",
+			url: "example.php",
+			success: function(data){
+				
+				console.log(data);
+				
+			}
+			
+			
+			
+		});
+	}
+	
+	function ajaxcss(){
+	
+	var css = $("#amatic-css-val").val();	
+	
+	console.log(css);
+		
+	$("body").append("<div class='amatic-element' style='display: none; "+css+"'><i class='fa fa fa-circle-o-notch rotating'></i></div>")
+	
+	setTimeout(function(){	$(".amatic-element").html("<i class='fa fa-check'></i>");	}, 1000);
+	
+	setTimeout(function(){	$(".amatic-element").remove();	}, 2000);
+	
+	}
+		
+	function ajaxtimeout(){
+	
+	var timeout = $("#amatic-timeout-val").val();	
+	
+	if(timeout < 2000){ alert("Minimum Timeout is 2000"); }else{
+	
+	if(timeout == ""){ var timeout = 2000;}
+	
+	var timeminus = timeout - 1000;
+	
+	console.log(timeout);
+		
+	$("body").append("<div class='amatic-element' style='display: none;'><i class='fa fa fa-circle-o-notch rotating'></i></div>")
+	
+		setTimeout(function(){	$(".amatic-element").html("<i class='fa fa-check'></i>");	}, timeminus);
+	
+	setTimeout(function(){	$(".amatic-element").remove();	}, timeout);
+	
+	}
+	
+
+	
+	}//timeout check
+	
+		function ajax(){
+	
+	$("body").append("<div class='amatic-element' style='display: none;'><i class='fa fa fa-circle-o-notch rotating'></i></div>");
+	
+	setTimeout(function(){	$(".amatic-element").html("<i class='fa fa-check'></i>");	}, 1000);
+	
+	setTimeout(function(){	$(".amatic-element").remove();	}, 2000);
+	
+	}
+	</script>
+	
+	
+	
+	
+	
+</body>
+</html>
+
