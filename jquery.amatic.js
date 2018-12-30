@@ -3,152 +3,159 @@
 // * Version - 1.0
 // * Licensed under the MIT license - http://opensource.org/licenses/MIT
 // * Renan Diaz
-// * Copyright (c) 2017 
+// * Copyright (c) 2017 - 2018
 
 
 (function ( $ ) {
 	
-	
-$.fn.amatic = function( css, options ) {
+	$.amatic = function( options ) {
 
-//	DETECT IF PLUGIN IS SET	
-	if ($(this).is(document)){
-			
-		
-		// Default options.
-        var options = $.extend({
+	//	DETECT IF PLUGIN IS SET	 
 
-			newclass: "",
-			loader: "fa fa-circle-o-notch",
-			loader_complete: "fa fa-check",
-			fade_in: true,
-			fade_out: true,
-			animate_in: "",
-			animate_out: "",
-			time_out: 2000
-			
-			
-        }, options );
-				
-		
-		
-//	REMOVE HTML TIME OUT
-		
-		var remove_time = options.time_out + 500;
-		
-//	AJAX START
-		
-		this.ajaxStart( function(){
-		
-			
-		if($('#amatic-element').length <= 0){
-			
-		$("body").append( "<div id='amatic-element' class='amatic-element' style='display: none;'><i class='"+options.loader+" rotating'></i></div>" );
-		
-		}
-			
-			
-		if(css !== ""){
-		
-		$("#amatic-element").css(css); //Add css if is set
-		
-		}
-			
-		$("#amatic-element").addClass(options.newclass); //Add class if is set			
-		
-		$("#amatic-element").addClass("animated "+options.animate_in); //Add animation if is set			
+			// Default options.
+	        var options = $.extend({
 
-		switch(options.fade_in){ //detect fadeIn config	
-				
-			case true :
+				newClass: "",
+				loader: "fa fa-circle-o-notch",
+				completeIcon: "fa fa-check",
+				fadeIn: true,
+				fadeOut: true,
+				animateIn: "",
+				animateOut: "",
+				timeOut: 2000,
+				css: null,
+				beforeLoader: function(){},
+				afterLoader: function(){}
+							
+	        }, options );
+					
+	//	REMOVE HTML TIME OUT
 			
-				if(options.animate_in !== ""){
+			var removeTime = options.timeOut + 500;
+			
+	//	AJAX START
+			
+			$(document).ajaxStart( function(event){
+
+				event.stopImmediatePropagation();
 				
-				   $("#amatic-element").show(); 
+				//beforeLoader Function
+	            options.beforeLoader.call(this);
+					
+				if($('#amatic-element').length <= 0){
+					
+					$("body").append( "<div id='amatic-element' class='amatic-element' style='display: none;'><i class='"+options.loader+" rotating'></i></div>" );
 				
-				}else{
+				}
+					
+					
+				if(options.css !== ""){
 				
-				   $("#amatic-element").fadeIn();
+					$("#amatic-element").css(options.css); //Add css if is set
+				
+				}
+					
+				$("#amatic-element").addClass(options.newClass); //Add class if is set			
+				
+				$("#amatic-element").addClass("animated "+options.animateIn); //Add animation if is set			
+
+				switch(options.fadeIn){ //detect fadeIn config	
+						
+					case true :
+					
+						if(options.animateIn !== ""){
+						
+						   $("#amatic-element").show(); 
+						
+						}else{
+						
+						   $("#amatic-element").fadeIn();
+						
+						}			
+						
+					break;
+					
+						
+					case false :
+					
+					   	$("#amatic-element").show(); 
+
+					break;
 				
 				}			
 				
-			break;
-			
-				
-			case false :
-			
-			   	$("#amatic-element").show(); 
-
-			break;
-		
-		}
+			});
 
 			
+	//	AJAX SUCCESS	
 			
-		});
+			$(document).ajaxSuccess(function(){
 
-		
-//	AJAX SUCCESS	
-		
-		this.ajaxSuccess(function(){
-
-		setTimeout(function(){
-			
-		$("#amatic-element").html("<i class='"+options.loader_complete+"'></i>"); 
-		
-		}, 1000);
-			
-		});
-
-
-//	AJAX COMPLETE	
-		
-		this.ajaxComplete( function(){
-		
-		$("#amatic-element").removeClass("animated "+options.animate_in); //remove initial animation if is set			
-			
-		$("#amatic-element").addClass("animated "+options.animate_out); //Add animation if is set			
-
-			
-			
-			switch (options.fade_out){//detect fadeOut config	
-				
-			case true :
-			
-				if(options.animate_out !== ""){
-				
-				   $("#amatic-element").hide(); 
-				
-				}else{
-				
-				   $("#amatic-element").fadeOut();
-				
-				}	
+				setTimeout(function(){
 					
-			break;
-			
-			case false :
-			
-			   	$("#amatic-element").hide(); 
+					$("#amatic-element").html("<i class='"+options.completeIcon+"'></i>"); 
+				
+				}, 1000);
+				
+			});
 
-			break;
+	//	AJAX SUCCESS	
 			
-			}
-		
-		
-		setTimeout(function(){	$("#amatic-element").remove();	}, remove_time);
+			$(document).ajaxError(function(){
+
+				setTimeout(function(){
+					
+					$("#amatic-element").html("<i class='"+options.completeIcon+"'></i>"); 
+				
+				}, 1000);
+
+				console.log("Something's wrong man!. There was an error!")
+				
+			});
+
+
+	//	AJAX COMPLETE	
 			
-		});
-		
-	}else{
-		
-// SETUP ERROR MSG			
-		console.log("Ajaxmatic no se inicio correctamente.");
+			$(document).ajaxComplete( function(){
+
+				//afterLoader Function
+	            options.afterLoader.call(this);
+
+				$("#amatic-element").removeClass("animated "+options.animateIn); //remove initial animation if is set			
+					
+				$("#amatic-element").addClass("animated "+options.animateOut); //Add animation if is set				
+					
+					switch (options.fadeOut){//detect fadeOut config	
 						
-	} 
+					case true :
+					
+						if(options.animateOut !== ""){
+						
+						   $("#amatic-element").hide(); 
+						
+						}else{
+						
+						   $("#amatic-element").fadeOut();
+						
+						}	
+							
+					break;
+					
+					case false :
+					
+					   	$("#amatic-element").hide(); 
 
-};
-	
+					break;
+					
+					}
+				
+				
+				setTimeout(function(){	
+					$("#amatic-element").remove();	
+				}, removeTime);
+				
+			}); 
 
+	};
 	
 }( jQuery ));
