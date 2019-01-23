@@ -8,22 +8,19 @@ amatic.js is a cool and customizable notification for an ajax event.
 # Basic Usage
 1.	Include the script and stylesheet on your document's <head> , Font-Awesome and jQuery are required for this plugin:
 
-<code> 
+<pre>
   &#60;link rel="stylesheet" href="amatic.css"&#62;
   &#60;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&#62;
   
   &#60;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">&#60;/script&#62;
-  &#60;script type="text/javascript" src="jquery.amatic.js">&#60;/script&#62;
-</code>
+  &#60;script type="text/javascript" src="jquery.amatic.js">&#60;/script&#62;</pre>
 <br>
 
 2.	To initialize the plugin:
 
-<pre> 
-      $(document).ready(function(){
+<pre>$(document).ready(function(){
         $.amatic();
-      }); 
-</pre>
+      });</pre>
 <br>
 
 3.	Syntax:
@@ -200,3 +197,4 @@ $.amatic(css, {
 # License
 
 Amatic.js is licensed under the MIT license. (http://opensource.org/licenses/MIT)
+
