@@ -44,7 +44,7 @@ Or:
 
 <pre>
 $.amatic(css, {
-	newclass: "super-class",										
+	newClass: "super-class",										
 	fadeIn: false
 });
 </pre>
@@ -66,135 +66,165 @@ $.amatic(css, {
 <table class="tg">
 <tbody>
 <tr>
-<td width="189">
+<td >
 	<p><b>Name</b></p>
 </td>
-<td width="115">
+<td >
 	<p><b>Type</b></p>
 </td>
-<td width="115">
+<td >
 	<p><b>Default</b></p>
 </td>
-<td width="115">
+<td >
 	<p><b>Description</b></p>
 </td>
 </tr>
 <tr>
-<td width="189">
-<p>newclass</p>
+<td >
+<p>newClass</p>
 </td>
-<td width="115">
+<td >
 <p>string</p>
 </td>
-<td width="115">
+<td >
 <p>null</p>
 </td>
-<td width="115">
+<td >
 <p>Define a new class for notification/loader</p>
 </td>
 </tr>
 <tr>
-<td width="189">
+<td >
 <p>loader</p>
 </td>
-<td width="115">
+<td >
 <p>string</p>
 </td>
-<td width="115">
+<td >
 <p>fa fa-circle-o-notch</p>
 </td>
-<td width="115">
+<td >
 <p>Define the class of the icon to display (Font Awesome is Default)</p>
 </td>
 </tr>
 <tr>
-<td width="189">
+<td >
 <p>completeIcon</p>
 </td>
-<td width="115">
+<td >
 <p>string</p>
 </td>
-<td width="115">
+<td >
 <p>fa fa-check</p>
 </td>
-<td width="115">
+<td >
 <p>Define the class of the icon to display (Font Awesome is Default)</p>
 </td>
 </tr>
 <tr>
-<td width="189">
+<td >
 <p>fadeIn</p>
 </td>
-<td width="115">
+<td >
 <p>boolean</p>
 </td>
-<td width="115">
+<td >
 <p>true</p>
 </td>
-<td width="115">
+<td >
 <p>Activate/Desactivate fade in at the start of notification/loader</p>
 </td>
 </tr>
 <tr>
-<td width="189">
+<td >
 <p>fadeOut</p>
 </td>
-<td width="115">
+<td >
 <p>boolean</p>
 </td>
-<td width="115">
+<td >
 <p>true</p>
 </td>
-<td width="115">
+<td >
 <p>Activate/Desactivate fade out at the start of notification/loader</p>
 </td>
 </tr>
 <tr>
-<td width="189">
+<td >
 <p>animateIn</p>
 </td>
-<td width="115">
+<td >
 <p>string</p>
 </td>
-<td width="115">
+<td >
 <p>null</p>
 </td>
-<td width="115">
+<td >
 <p>The class of the animation to display &nbsp;(animate.css required)</p>
 </td>
 </tr>
 <tr>
-<td width="189">
+<td >
 <p>animateOut</p>
 </td>
-<td width="115">
+<td >
 <p>string</p>
 </td>
-<td width="115">
+<td >
 <p>null</p>
 </td>
-<td width="115">
+<td >
 <p>The class of the animation to hide (animate.css required)</p>
 </td>
 </tr>
 <tr>
-<td width="189">
+<td >
 <p>timeOut</p>
 </td>
-<td width="115">
+<td >
 <p>time</p>
 </td>
-<td width="115">
+<td >
 <p>2000 (2 seconds)</p>
 </td>
-<td width="115">
+<td >
 <p>The time of the notification/loader to be displayed</p>
 </td>
 </tr>
+
+<tr>
+<td >
+<p>timeOut</p>
+</td>
+<td >
+<p>time</p>
+</td>
+<td >
+<p>2000 (2 seconds)</p>
+</td>
+<td >
+<p>The time of the notification/loader to be displayed</p>
+</td>
+</tr>
+
+<tr>
+<td >
+<p>timeOut</p>
+</td>
+<td >
+<p>time</p>
+</td>
+<td >
+<p>2000 (2 seconds)</p>
+</td>
+<td >
+<p>The time of the notification/loader to be displayed</p>
+</td>
+</tr>
+
 </tbody>
 </table>
 
 # License
 
 Amatic.js is licensed under the MIT license. (http://opensource.org/licenses/MIT)
-
