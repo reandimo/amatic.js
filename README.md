@@ -194,31 +194,31 @@ $.amatic(css, {
 
 <tr>
 <td >
-<p>timeOut</p>
+<p>beforeLoader</p>
 </td>
 <td >
-<p>time</p>
+<p>callback</p>
 </td>
 <td >
-<p>2000 (2 seconds)</p>
+<p>null</p>
 </td>
 <td >
-<p>The time of the notification/loader to be displayed</p>
+<p>Callback before the loader is displayed</p>
 </td>
 </tr>
 
 <tr>
 <td >
-<p>timeOut</p>
+<p>afterLoader</p>
 </td>
 <td >
-<p>time</p>
+<p>callback</p>
 </td>
 <td >
-<p>2000 (2 seconds)</p>
+<p>null</p>
 </td>
 <td >
-<p>The time of the notification/loader to be displayed</p>
+<p>Callback after the loader is displayed</p>
 </td>
 </tr>
 
