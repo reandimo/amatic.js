@@ -21,33 +21,37 @@ amatic.js is a cool and customizable notification for an ajax event.
 2.	To initialize the plugin:
 
 <code>
-     <<span>script</span>>   $(document).amatic();   <<span>script</span>>
+    <<span>script</span>>  
+      $(document).ready(function(){
+        $.amatic();
+      });
+    <<span>script</span>>
 </code>
 <br>
 
 3.	Syntax:
 
-  <pre>jQuery(document).amatic( [CSS RULES], [OPTIONS] );</pre>
+  <pre>$.amatic( [CSS RULES], [OPTIONS] );</pre>
 <br>
 
 4.	You can define new CSS Rules for the notification/loader like this:
 
   <pre>var css = { backgroundColor: "black", color: "white" };</pre>
 
-  <pre>$(document).amatic(css);</pre>
+  <pre>$.amatic(css);</pre>
 <br>
 
 Or:
 
-  <pre>$(document).amatic({backgroundColor: "black", color: "white" });</pre>
+  <pre>$.amatic({backgroundColor: "black", color: "white" });</pre>
 <br>
 
 5.	And modify the options avaiables:
 
 <pre>
-$(document).amatic(css, {
-	newclass: "",										
-	fade_in: false
+$.amatic(css, {
+	newclass: "super-class",										
+	fadeIn: false
 });
 </pre>
 
@@ -57,9 +61,9 @@ $(document).amatic(css, {
 
 <pre><script>
 
-$(document).amatic(css, {
-	animate_in: "bounceInUp", 
-	animate_out: "bounceOutDown"
+$.amatic(css, {
+	animateIn: "bounceInUp", 
+	animateOut: "bounceOutDown"
 });
 
 </script></pre>
@@ -113,7 +117,7 @@ $(document).amatic(css, {
 </tr>
 <tr>
 <td width="189">
-<p>loader_complete</p>
+<p>completeIcon</p>
 </td>
 <td width="115">
 <p>string</p>
@@ -127,7 +131,7 @@ $(document).amatic(css, {
 </tr>
 <tr>
 <td width="189">
-<p>fade_in</p>
+<p>fadeIn</p>
 </td>
 <td width="115">
 <p>boolean</p>
@@ -141,7 +145,7 @@ $(document).amatic(css, {
 </tr>
 <tr>
 <td width="189">
-<p>fade_out</p>
+<p>fadeOut</p>
 </td>
 <td width="115">
 <p>boolean</p>
@@ -155,7 +159,7 @@ $(document).amatic(css, {
 </tr>
 <tr>
 <td width="189">
-<p>animate_in</p>
+<p>animateIn</p>
 </td>
 <td width="115">
 <p>string</p>
@@ -169,7 +173,7 @@ $(document).amatic(css, {
 </tr>
 <tr>
 <td width="189">
-<p>animate_out</p>
+<p>animateOut</p>
 </td>
 <td width="115">
 <p>string</p>
@@ -183,7 +187,7 @@ $(document).amatic(css, {
 </tr>
 <tr>
 <td width="189">
-<p>time_out</p>
+<p>timeOut</p>
 </td>
 <td width="115">
 <p>time</p>
@@ -201,3 +205,4 @@ $(document).amatic(css, {
 # License
 
 Amatic.js is licensed under the MIT license. (http://opensource.org/licenses/MIT)
+
