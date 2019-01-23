@@ -8,25 +8,22 @@ amatic.js is a cool and customizable notification for an ajax event.
 # Basic Usage
 1.	Include the script and stylesheet on your document's <head> , Font-Awesome and jQuery are required for this plugin:
 
-<pre><<span>head</span>>
-
-  <<span>link</span> rel="stylesheet" href="amatic.css">
-  <<span>link</span> rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<code> 
+  &#60;link rel="stylesheet" href="amatic.css"&#62;
+  &#60;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"&#62;
   
-  <<span>script</span> src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></<span>script</span>>
-  <<span>script</span> type="text/javascript" src="jquery.amatic.js"></<span>script</span>>
-</<span>head</span>></pre>
+  &#60;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">&#60;/script&#62;
+  &#60;script type="text/javascript" src="jquery.amatic.js">&#60;/script&#62;
+</code>
 <br>
 
 2.	To initialize the plugin:
 
-<code>
-    <<span>script</span>>  
+<pre> 
       $(document).ready(function(){
         $.amatic();
-      });
-    <<span>script</span>>
-</code>
+      }); 
+</pre>
 <br>
 
 3.	Syntax:
@@ -59,14 +56,12 @@ $.amatic(css, {
 
 6.	Animations:
 
-<pre><script>
-
+<pre> 
 $.amatic(css, {
 	animateIn: "bounceInUp", 
 	animateOut: "bounceOutDown"
 });
-
-</script></pre>
+</pre>
 <br>
 
 # Options
@@ -205,4 +200,3 @@ $.amatic(css, {
 # License
 
 Amatic.js is licensed under the MIT license. (http://opensource.org/licenses/MIT)
-
