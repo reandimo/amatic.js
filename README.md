@@ -3,7 +3,7 @@ Simple and beautiful ajax notifications/loaders
 
 Amatic.js 
 Ajax notification/loader made easy <br>
-<a href="https://reandimo.github.io/amatic.js/">https://reandimo.github.io/amatic.js/</a>
+<a href="https://reandimo.github.io/amatic.js/">https://reandimo.github.io/amatic.js/</a><br>
 amatic.js is a cool and customizable notification for an ajax event.
 
 # Basic Usage
